@@ -96,8 +96,22 @@ void handleJson(String payload)
   //unsigned long timeNTP = timeclient.getEpochTime();
   unsigned long timeNTP = doc["epochTime"];
 
-  File temp = SPIFFS.open("/log.csv", "a");
+  File log = SPIFFS.open("/log.csv", "a");
 
+
+  log.print(timeNTP);
+  log.print(',');
+  log.print(temperature);
+  log.print(',');
+  log.print(pressureAsl);
+  log.print(',');
+  log.println(humidity);
+
+  log.close();
+
+  Serial.println("Saving to log.csv");
+
+  File temp = SPIFFS.open("/temp.txt", "w");
 
   temp.print(timeNTP);
   temp.print(',');
@@ -108,8 +122,6 @@ void handleJson(String payload)
   temp.println(humidity);
 
   temp.close();
-
-  Serial.println("Saving to log.csv");
 }
 
 
