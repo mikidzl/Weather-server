@@ -25,20 +25,11 @@
 			<span>Wilgotność: </span>
 			<span id="humidity"></span>
 			<span>%</span><br>
-			<div> Ostatnia aktualizacja: </div>
-			<div id="time"></div>
+			<span> Ostatnia aktualizacja: </span>
+			<span id="time"></span><br>
+			<div id="connected" style="visibility: hidden; color: crimson;">Utracono połączenie</div><br>
 		</div>
-		<!-- <div id="chart_div"></div>
-		<div id="loading">Loading ...</div>
-        <div id="dateselect" style="visibility: hidden;">
-            <div id="date"></div>
-            <button id="prev">&lt;</button>
-            <button id="next">&gt;</button><br>
-            <button id="zoomout">-</button>
-            <button id="zoomin">+</button><br>
-            <button id="reset" style="width: 4.4em;">Reset</button><br>
-            <button id="refresh" style="width: 4.4em;">Refresh</button>
-		</div> -->
+		<a class="button" href="graph.html">Wykresy</a>
 	</center>
 
 	<script src="handlingMain.js"></script>
@@ -61,10 +52,24 @@
 			margin: 0px 0px 12px 0px;
 		}
 
-		button {
+		/* button {
 			font-size: 14pt;
 			width: 2em;
-		}
+		} */
+
+		.button {
+            text-decoration: none;
+            border: none;
+            color: white;
+            background-color: #00878F;
+            padding: 6px 24px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 1px 1px 6px #555;
+            outline: none;
+            margin: 12px auto 0px auto;
+            display: inline-block;
+        }
 
 		center {
 			padding: 1em;

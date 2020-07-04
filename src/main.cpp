@@ -151,12 +151,7 @@ void webSocketEvent(uint8_t num, WStype_t type, uint8_t *payload, size_t length)
     // }
     if (payload[0] != 'C')            //first text is "Connected"
       handleJson((char *)payload);
-
-    // send message to client
-    // webSocket.sendTXT(num, "message here");
-
-    // send data to all connected clients
-    // webSocket.broadcastTXT("message here");
+    
     break;
   case WStype_BIN:
     Serial.printf("[%u] get binary length: %u\n", num, length);

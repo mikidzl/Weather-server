@@ -54,11 +54,6 @@ function parseCSV(string) {
     for (var i = 0; i < lines.length - 1; i++) {
         var data = lines[i].split(",", 4);
 
-        if (i == lines.length - 2 ) {
-            document.getElementById("temperature").textContent = data[1];
-            //document.getElementById("time").textContent = data[0];
-        }
-
         data[0] = new Date(parseInt(data[0]) * 1000);
         data[1] = parseFloat(data[1]);
         data[2] = parseFloat(data[2]);
